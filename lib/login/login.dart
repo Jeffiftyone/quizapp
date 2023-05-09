@@ -22,9 +22,15 @@ class LoginScreen extends StatelessWidget {
                 icon: FontAwesomeIcons.userNinja,
                 text: 'Continue as Guest',
                 loginMethod: AuthService().anonLogin,
-                color: Colors.deepOrange,
+                color: Colors.deepPurple,
               ),
-            )
+            ),
+            LoginButton(
+              icon: FontAwesomeIcons.google,
+              text: 'Sign in with Google',
+              loginMethod: AuthService().googleLogin,
+              color: Colors.blue,
+            ),
           ],
         ),
       ),
