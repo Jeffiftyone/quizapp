@@ -56,8 +56,12 @@ class LoginButton extends StatelessWidget {
           color: Colors.white,
           size: 20,
         ),
+        style: TextButton.styleFrom(
+          padding: const EdgeInsets.all(24),
+          backgroundColor: color,
+        ),
         onPressed: () => loginMethod(),
-        label: Text(''),
+        label: Text(text),
       ),
     );
   }

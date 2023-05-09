@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           } else if (snapshot.hasData) {
             return const TopicsScreen();
           } else {
-            return const HomeScreen();
+            return const LoginScreen();
           }
         });
   }
