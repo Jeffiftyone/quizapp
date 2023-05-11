@@ -4,6 +4,7 @@ import 'package:quiz_app/login/login.dart';
 import 'package:quiz_app/profile/profile.dart';
 import 'package:quiz_app/topics/topics.dart';
 
+//app routes
 var appRoutes = {
   '/': (context) => const HomeScreen(),
   '/login': (context) => const LoginScreen(),

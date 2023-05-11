@@ -10,6 +10,7 @@ class ProfileScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text('Profile'),
         ),
+        //sign out button
         body: ElevatedButton(
             child: Text('Sign Out'),
             onPressed: () async {

@@ -17,6 +17,7 @@ class LoginScreen extends StatelessWidget {
             const FlutterLogo(
               size: 150,
             ),
+            //anonymous login button
             Flexible(
               child: LoginButton(
                 icon: FontAwesomeIcons.userNinja,
@@ -25,6 +26,7 @@ class LoginScreen extends StatelessWidget {
                 color: Colors.deepPurple,
               ),
             ),
+            //google login button
             LoginButton(
               icon: FontAwesomeIcons.google,
               text: 'Sign in with Google',
@@ -37,7 +39,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
+//button blueprint
 class LoginButton extends StatelessWidget {
   final Color color;
   final IconData icon;
