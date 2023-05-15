@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:quiz_app/services/auth.dart';
-import 'package:quiz_app/services//models.dart';
+import 'package:quiz_app/services/models.dart';
 
 //fetching data
 class FirestoreService {
