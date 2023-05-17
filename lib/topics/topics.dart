@@ -10,29 +10,46 @@ class TopicsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Topic>>(
-        future: FirestoreService().getTopics(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-          } else if (snapshot.hasError) {
-          } else if (snapshot.hasData) {
-            var topics = snapshot.data;
-            return Scaffold(
-              appBar: AppBar(
-                  backgroundColor: Colors.deepOrange,
-                  title: const Text('Topics')),
-              body: GridView.count(
-                primary: false,
-                padding: const EdgeInsets.all(20.0),
-                crossAxisCount: 2,
-                crossAxisSpacing: 10.0,
-                children:
-                    topics.map((topic) => TopicItem(topic: topic)).toList()),
-              ),
-              bottomNavigationBar: const BottomNavigationBar(),
-            );
-          } else {
-            return const Text('No topics foung in Firestore. Check database.');
-          }
-        });
+      future: FirestoreService().getTopics(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Text('loading');
+          //add loading screen
+        } else if (snapshot.hasError) {
+          return const Center(
+              // child: ErrorMessage(message: snapshot.error.toString()),
+              );
+        } else if (snapshot.hasData) {
+          var topics = snapshot.data!;
+
+          return Scaffold(
+            appBar: AppBar(
+              backgroundColor: Colors.deepPurple,
+              title: const Text('Topics'),
+              // actions: [
+              //   IconButton(
+              //     icon: Icon(
+              //       FontAwesomeIcons.circleUser,
+              //       color: Colors.pink[200],
+              //     ),
+              //     onPressed: () => Navigator.pushNamed(context, '/profile'),
+              //   )
+              // ],
+            ),
+            //drawer: TopicDrawer(topics: topics),
+            body: GridView.count(
+              primary: false,
+              padding: const EdgeInsets.all(20.0),
+              crossAxisSpacing: 10.0,
+              crossAxisCount: 2,
+              children: topics.map((topic) => TopicItem(topic: topic)).toList(),
+            ),
+            bottomNavigationBar: const BottomNavBar(),
+          );
+        } else {
+          return const Text('No topics found in Firestore. Check database');
+        }
+      },
+    );
   }
 }

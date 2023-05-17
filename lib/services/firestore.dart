@@ -41,7 +41,7 @@ class FirestoreService {
     var ref = _db.collection('reports').doc(user.uid);
 
     var data = {
-      'total': FieldValue.increment(1);
+      'total': FieldValue.increment(1),
       'topics': {
         quiz.topic: FieldValue.arrayUnion([quiz.id])
       }
