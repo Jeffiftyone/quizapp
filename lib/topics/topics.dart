@@ -36,7 +36,7 @@ class TopicsScreen extends StatelessWidget {
               //   )
               // ],
             ),
-            //drawer: TopicDrawer(topics: topics),
+            drawer: TopicDrawer(topics: topics),
             body: GridView.count(
               primary: false,
               padding: const EdgeInsets.all(20.0),

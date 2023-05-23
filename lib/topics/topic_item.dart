@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/services/models.dart';
-//import 'package:quiz_app/shared/progress_bar.dart'
+import 'package:quiz_app/topics/drawer.dart';
+
+import 'package:quiz_app/shared/progress_bar.dart';
 
 class TopicItem extends StatelessWidget {
 //import 'package:quiz_app/shared/progress_bar.dart'
@@ -47,6 +49,7 @@ class TopicItem extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Flexible(child: TopicProgress(topic: topic)),
                 ],
               ),
             )));
@@ -75,6 +78,7 @@ class TopicScreen extends StatelessWidget {
               style: const TextStyle(
                   height: 2, fontSize: 20, fontWeight: FontWeight.bold),
             ),
+            QuizList(topic: topic)
           ],
         ));
   }
