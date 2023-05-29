@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quiz_app/services/firestore.dart';
 import 'package:quiz_app/services/models.dart';
 import 'package:quiz_app/shared/shared.dart';
@@ -26,17 +27,17 @@ class TopicsScreen extends StatelessWidget {
 
           return Scaffold(
             appBar: AppBar(
-              backgroundColor: Colors.deepPurple,
+              backgroundColor: Color.fromARGB(255, 35, 35, 212),
               title: const Text('Topics'),
-              // actions: [
-              //   IconButton(
-              //     icon: Icon(
-              //       FontAwesomeIcons.circleUser,
-              //       color: Colors.pink[200],
-              //     ),
-              //     onPressed: () => Navigator.pushNamed(context, '/profile'),
-              //   )
-              // ],
+              actions: [
+                IconButton(
+                  icon: const Icon(
+                    FontAwesomeIcons.circleUser,
+                    color: Colors.black,
+                  ),
+                  onPressed: () => Navigator.pushNamed(context, '/profile'),
+                )
+              ],
             ),
             drawer: TopicDrawer(topics: topics),
             body: GridView.count(

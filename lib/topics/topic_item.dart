@@ -5,7 +5,6 @@ import 'package:quiz_app/topics/drawer.dart';
 import 'package:quiz_app/shared/progress_bar.dart';
 
 class TopicItem extends StatelessWidget {
-//import 'package:quiz_app/shared/progress_bar.dart'
   final Topic topic;
   const TopicItem({super.key, required this.topic});
   @override
@@ -64,13 +63,14 @@ class TopicScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Color.fromARGB(255, 17, 17, 112),
+          title: Text('Quiz:\t ${topic.title}'),
         ),
         body: ListView(
           children: [
             Hero(
               tag: topic.img,
-              child: Image.asset('asset/covers/${topic.img}',
+              child: Image.asset('assets/covers/${topic.img}',
                   width: MediaQuery.of(context).size.width),
             ),
             Text(

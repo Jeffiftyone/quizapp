@@ -23,7 +23,7 @@ class TopicDrawer extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 10, left: 10),
                   child: Text(
                     topic.title,
-                    // textAlign: TextAlign.left,
+                    textAlign: TextAlign.left,
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -68,12 +68,12 @@ class QuizList extends StatelessWidget {
                 child: ListTile(
                   title: Text(
                     quiz.title,
-                    style: Theme.of(context).textTheme.headline5,
+                    style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   subtitle: Text(
                     quiz.description,
                     overflow: TextOverflow.fade,
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                   leading: QuizBadge(topic: topic, quizId: quiz.id),
                 ),
@@ -97,7 +97,7 @@ class QuizBadge extends StatelessWidget {
     Report report = Provider.of<Report>(context);
     List completed = report.topics[topic.id] ?? [];
     if (completed.contains(quizId)) {
-      return const Icon(FontAwesomeIcons.checkDouble, color: Colors.green);
+      return const Icon(FontAwesomeIcons.check, color: Colors.green);
     } else {
       return const Icon(FontAwesomeIcons.solidCircle, color: Colors.grey);
     }

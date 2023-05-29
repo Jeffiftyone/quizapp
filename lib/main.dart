@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/services/firestore.dart';
 import 'package:quiz_app/services/models.dart';
+import 'shared/shared.dart';
 import 'theme.dart';
 
 //import 'package:quiz_app/services/services.dart';
@@ -55,7 +56,7 @@ class _AppState extends State<App> {
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
-        return Text('loading');
+        return Loader();
       },
     );
   }

@@ -1,17 +1,26 @@
-# quiz_app
+# Coding Quiz App
 
-A new Flutter project.
-This application is projected to be a quiz app that will work with android devices using the flutterfire stack.
+## Description
+The Firebase-Flutter Quiz Application is a user-friendly mobile app designed to quiz users on basic coding concepts. The app utilizes the Firebase platform for storing quiz questions and tracking user progress. 
 
-## Getting Started
+## Table of Contents
 
-This project is a starting point for a Flutter application.
+* [Entity Relational Diagram](#EntityRelationalDiagram)
+* [Demo](#Demo)
+* [Screenshots](#screenshots)
+* [License](#license)
+* [Questions](#questions)
 
-A few resources to get you started if this is your first Flutter project:
+## Entity Relational Diagram
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Demo
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+## License
+This project is licensed under the MIT license.
+
+
+## Questions
+If you have any queations regarding the repo, open an issue or contact me directly at [jeffiftyone@gmail.com](mailto:jeffiftyone@gmail.com).
+You can find more of my work at [Jeffiftyone](https://github.com/Jeffiftyone)
