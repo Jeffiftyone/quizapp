@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/services/firestore.dart';
 import 'package:quiz_app/services/models.dart';
-import 'package:quiz_app/shared/bottom_nav.dart';
+import 'package:quiz_app/shared/shared.dart';
 import 'package:quiz_app/topics/topic_item.dart';
+
+import 'drawer.dart';
 
 class TopicsScreen extends StatelessWidget {
   const TopicsScreen({super.key});
@@ -17,8 +19,8 @@ class TopicsScreen extends StatelessWidget {
           //add loading screen
         } else if (snapshot.hasError) {
           return const Center(
-              // child: ErrorMessage(message: snapshot.error.toString()),
-              );
+            child: ErrorMessage(message: 'error occurred'),
+          );
         } else if (snapshot.hasData) {
           var topics = snapshot.data!;
 
