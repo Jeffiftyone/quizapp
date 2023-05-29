@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'theme.dart';
 
-import 'package:quiz_app/services/services.dart';
+//import 'package:quiz_app/services/services.dart';
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
 import 'package:quiz_app/routes.dart';
@@ -55,6 +55,17 @@ class _AppState extends State<App> {
         // Otherwise, show something whilst waiting for initialization to complete
         return Text('loading');
       },
+    );
+  }
+}
+
+class QuizState with ChangeNotifier {
+  final PageController controller = PageController();
+
+  void nextPage() async {
+    await controller.nextPage(
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.easeOut,
     );
   }
 }
