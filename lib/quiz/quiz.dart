@@ -91,5 +91,33 @@ class StartPage extends StatelessWidget {
 //congrats page
 class CongratsPage extends StatelessWidget {
   final Quiz quiz;
-  const 
+  const CongratsPage({Key? key, required this.quiz}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.all(8),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Congrats you have successfully completed the ${quiz.title} quiz',
+              textAlign: TextAlign.center,
+            ),
+            const Divider(),
+            Image.asset('assets/congrats.gif'),
+            const Divider(),
+            ElevatedButton.icon(
+              onPressed: () {
+                FirestoreService().updateUserReport(quiz);
+                //send user back to topics screen
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/topics', (route) => false);
+              },
+              icon: const Icon(FontAwesomeIcons.check),
+              label: const Text(' Mark Complete'),
+            ),
+          ],
+        ));
+  }
 }
