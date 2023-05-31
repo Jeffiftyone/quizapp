@@ -5,13 +5,11 @@ The Firebase-Flutter Quiz Application is a user-friendly mobile app designed to 
 
 ## Table of Contents
 
-* [Entity Relational Diagram](#EntityRelationalDiagram)
 * [Demo](#Demo)
 * [Screenshots](#screenshots)
 * [License](#license)
 * [Questions](#questions)
 
-## Entity Relational Diagram
 
 ## Demo
 https://drive.google.com/file/d/1J__aHvICYhHTrjCBsgFbdgWA5YnK5qCX/view
