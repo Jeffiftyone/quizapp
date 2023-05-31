@@ -22,7 +22,7 @@ https://drive.google.com/file/d/1J__aHvICYhHTrjCBsgFbdgWA5YnK5qCX/view
 ![Quiz Page](assets/demo/quizpage.PNG "Quiz Screen")
 ![Quiz Complete](assets/demo/quizcomplete.PNG "Quiz Complete")
 ![Profile](assets/demo/profile.PNG "Profile")
-![About](assets/demo/about.PNG"About")
+![About](assets/demo/about.PNG "About")
 
 
 ## License
