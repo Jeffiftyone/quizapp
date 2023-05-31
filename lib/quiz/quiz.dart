@@ -168,7 +168,7 @@ class QuestionPage extends StatelessWidget {
                             margin: const EdgeInsets.only(left: 16),
                             child: Text(
                               opt.value,
-                              style: Theme.of(context).textTheme.bodyText2,
+                              style: Theme.of(context).textTheme.bodyMedium,
                             ),
                           ),
                         )

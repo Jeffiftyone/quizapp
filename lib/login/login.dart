@@ -39,6 +39,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
 //button blueprint
 class LoginButton extends StatelessWidget {
   final Color color;
