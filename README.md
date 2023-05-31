@@ -17,7 +17,7 @@ The Firebase-Flutter Quiz Application is a user-friendly mobile app designed to 
 https://drive.google.com/file/d/1J__aHvICYhHTrjCBsgFbdgWA5YnK5qCX/view
 
 ## Screenshots
-![Login Screen](assets/demo/loginscreen.PNG' "Login Screen")
+![Login Screen](assets/demo/loginscreen.PNG "Login Screen")
 ![Topics Screen](assets/demo/topic_screen.PNG "Topics Screen")
 ![Quiz Page](assets/demo/quizpage.PNG "Quiz Screen")
 ![Quiz Complete](assets/demo/quizcomplete.PNG "Quiz Complete")
